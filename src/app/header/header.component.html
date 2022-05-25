@@ -1,0 +1,30 @@
+<div class="container-fluid app-title">
+  <div class="">
+    <div class="row">
+      <div class="col">
+        <img class="org-logo" src="assets/org-logo.svg" alt="(Org Name)"/>
+      </div>
+      <div class="col" > 
+          <div id="username">john.searle@orgname.co.nz </div>          
+      </div>
+      <div class="col-1">
+        <div>
+          <!-- <button type="button" id="btn-login"  class="btn btn-primary btn-sm">Log in</button> -->
+          <button type="button" id="btn-login"  class="btn btn-light btn-sm">Log out</button>
+        </div>      
+      </div>
+    </div>  
+  </div>
+</div>
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="link.id" *ngFor="let link of navLinks">
+    <a ngbNavLink routerLink="." [routerLink]="link.route">{{ link.title }}</a>
+  </li>
+</ul>
+
+<pre>Active: {{ active }}</pre>
+
+
+
+
